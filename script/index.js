@@ -14,13 +14,13 @@ const sortPriceAscending = document.querySelector(".sort-price-asc");
 const sortPriceDescending = document.querySelector(".sort-price-desc");
 const sortProductRating = document.querySelector(".sort-product-rating");
 
-let apiUrl = "https://kvt-api.herokuapp.com";
+let apiUrl = "https://kvt-api.herokuapp.com/";
 
 const createCard = (postData) => {
-  const productImage = postData.productImage[0];
+  const productImage = apiUrl+postData.productImage[0];
   let card = ` <div class="col product-card">
           <div class="card h-100 flex-col">
-          <img src=`https://kvt-api.herokuapp.com/${productImage}` class="card-img-top" alt="product_image">
+          <img src=`${productImage}` class="card-img-top" alt="product_image">
           <div class="card-body">
             <h6 class="card-title">${postData.title}</h6>
             <p class="product-description">${postData.description
