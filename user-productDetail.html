@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/carousel.css">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+    <title>Product Detail - User</title>
+  </head>
+
+  <body>
+    <div class="container wrapper">
+        
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">KVT</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="iconify" data-icon="cil:hamburger-menu" data-inline="false" style="color: white;" data-flip="horizontal"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="favorites.html">Favorites</a>
+                  </li>
+                  <form class="d-flex">
+                    <button class="btn" type="submit"><span class="iconify" data-icon="flat-color-icons:search" data-inline="false" data-flip="horizontal"></span></button>
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  </form>
+                
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Sign-Out</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="create-ad.html">Sell</a>
+                  </li>
+                </ul>
+             
+              </div>
+            </div>
+          </nav>
+        
+
+        <section class="product-details-section flex-col">
+            <div class="product-details-header-div flex-row">
+                <h5 class="search-header">PRODUCT DETAILS</h5>
+                <div class="meta-details"> 
+                  <span>Date Posted: 
+                    <small class="date-posted"></small>
+                  </span>
+                  <span>Location: 
+                    <small class="region"></small>  
+                  </span>
+                </div>
+            </div>
+            <hr>
+         
+            <div class="row product-detail-div">
+                <div class="col-6 flexc">
+                 
+                    <div class="carousel-container flexc">
+                        <div class="left-arrow">
+                        <h1 class="flexc">&lt;</h1>
+                        </div>
+                    
+                        <div class="image-container flexc flex-col">
+                      
+                          <div>
+                            <ul class="dotList"></ul>
+                          </div>
+                        </div>
+                    
+                        <div class="right-arrow">
+                          <h1 class="flexc">&gt;</h1>
+                        </div>
+                      </div>
+                    
+                      <script src="https://use.fontawesome.com/2f5189959d.js"></script>
+                </div>
+
+                <div class="col-6 details">
+                    <div class="details-header flex-row">
+                        <h5 class="details-title"></h5>
+                        <p class="details-price"></p>
+                        <!-- <span class="iconify favorite-btn" data-icon="ic:baseline-favorite" data-inline="false"></span> -->
+                    </div>
+                    <hr>
+                    <p class="main-info"></p>
+                    
+                    <p class="phone-number"><span>Phone Number: </span><span class="value"></span></p>
+                    
+                    <hr>
+                    
+                    <div class="flex-row sharing-ratings-div">
+                        <div class="social-media-sharing-div">
+                            <p>Share to social media</p> 
+                            <div class="social-share-wrapper flex-row">
+                                <a href="#"><span class="iconify" data-icon="ic:baseline-alternate-email" data-inline="false"></span></a>
+                                <a href="#"><span class="iconify" data-icon="entypo-social:facebook-with-circle" data-inline="false"></span></a>
+                                <a href="#"><span class="iconify" data-icon="entypo-social:twitter-with-circle" data-inline="false"></span></a>
+                                <a href="#"><span class="iconify" data-icon="entypo-social:instagram-with-circle" data-inline="false"></span></a>
+                                <a href="#"><span class="iconify" data-icon="ri:whatsapp-fill" data-inline="false"></span></a>
+                                <a href="#"><span class="iconify" data-icon="cib:telegram" data-inline="false"></span></a>
+                            </div>
+                        </div>
+                        <div class="ratings-div">
+                            <p class="header">Product Rating</p>
+                            <div class="ratings">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="chat-div flex-row">
+                        <button class="btn modify-post-btn btn-primary mr-3">Modify Post</button>
+                      <button class="delete-post-btn btn-danger btn">Delete Post</button>
+                    </div>
+                </div>
+            </div>
+            
+           
+            <div class="pagination-div flex-row" onclick="window.history.back()">
+                <div class="previous-page-btn flex-row btn return-to-main-page"><span class="iconify" data-icon="bi:arrow-bar-left" data-inline="false"></span> <span>Return to Search Results</span></div>
+            </div>
+
+        </section>
+
+        <footer class="flex-row">
+          <p class="team-details">&copy; <script>document.write(new Date().getFullYear())</script> KVT Team. All rights reserved</p>
+        </footer>
+
+
+    </div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <script src="script/user-productDetail.js"></script>
+    <script src="script/carousel.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+    <title>Pending Posts</title>
+  </head>
+
+  <body>
+    <div class="container wrapper">
+        
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">KVT</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="iconify" data-icon="cil:hamburger-menu" data-inline="false" style="color: white;" data-flip="horizontal"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="favorites.html">Favorites</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="create-ad.html">Sell</a>
+              </li><li class="nav-item signout-btn">
+                <a class="nav-link active" aria-current="page" href="#">Sign-Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+        
+    
+        <section class="categories-section">
+          <ul class="categories-list flex-row">
+            <li><a href="user-dashboard.html"><span>My Profile</span><span class="iconify" data-icon="gg:menu-grid-o" data-inline="false" data-flip="horizontal"></span></a></li>
+            <li><a href="pending-posts.html"><span>Pending Posts</span><span class="iconify" data-icon="ic:baseline-pending-actions" data-inline="false" style="color: orange;"></span><sup class="pending-posts-tab-count"></sup></a></li>
+            <li><a href="rejected-posts.html"><span>Rejected Posts</span><span class="iconify" data-icon="flat-color-icons:cancel" data-inline="false"></span><sup class="rejected-posts-tab-count"></sup></a></li>
+            <li><a href="approved-posts.html"><span>Approved Posts</span><span class="iconify" data-icon="codicon:pass" data-inline="false" style="color: green;"></span><sup class="approved-posts-tab-count"></sup></a></li>
+            <li><a href="favorites.html"><span>Favorites</span><span class="iconify" data-icon="flat-color-icons:like" data-inline="false"></span><sup class="favorite-posts-tab-count"></sup></a></li>
+            <li><a href="create-ad.html"><span>Create Ad</span><span class="iconify" data-icon="entypo:new-message" data-inline="false" style="color: green;"></span></a></li>
+            
+        </ul>
+        </section>
+
+        <section class="content-section flex-col pending-posts-content-section">
+            <div class="content-header-div flex-row">
+                <h5 class="search-header">PENDING POSTS</h5>
+                <p class="pending-posts-count">0</p>
+            </div>
+            <hr>
+         
+           <div class="pending-posts-div result-display-div row row-cols-1 row-cols-md-4 g-4">
+               
+           </div>
+
+           <div class="pagination-div flex-row">
+            <div class="previous-page-btn flex-row btn return-to-main-page" onclick="window.history.back()">
+                <span class="iconify" data-icon="bi:arrow-bar-left" data-inline="false"></span> <span>Return</span>
+            </div>
+          </div>
+      </section>
+
+      
+
+        <footer class="flex-row">
+          <p class="team-details">&copy; <script>document.write(new Date().getFullYear())</script> KVT Team. All rights reserved</p>
+        </footer>
+
+
+    </div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <script src="script/user-pendingPosts.js"></script>
+  </body>
+</html>

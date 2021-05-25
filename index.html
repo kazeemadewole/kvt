@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- <link rel="stylesheet" href="styles/sign-in-registration.css"> -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+    
+
+
+    <title>KVT Ads</title>
+  </head>
+
+  <body>
+    <div class="container wrapper">
+        
+      <nav class="navbar navbar-expand-lg loggedin hide">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">KVT</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="iconify" data-icon="cil:hamburger-menu" data-inline="false" style="color: white;" data-flip="horizontal"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="favorites.html">Favorites</a>
+              </li>
+              <form class="d-flex">
+                <button class="btn search-btn-logged-in" type="submit"><span class="iconify" data-icon="flat-color-icons:search" data-inline="false" data-flip="horizontal"></span></button>
+                <input class="form-control me-2 searchInputFieldLoggedIn" type="search" placeholder="Search" aria-label="Search" id="searchInputField2">
+              </form>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="create-ad.html">Sell</a>
+              </li> <li class="nav-item signout-btn">
+                <a class="nav-link active" aria-current="page" href="#">Sign-Out</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="user-dashboard.html">My Profile</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+        <nav class="navbar navbar-expand-lg general">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">KVT</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="iconify" data-icon="cil:hamburger-menu" data-inline="false" style="color: white;" data-flip="horizontal"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                 
+                  <form class="d-flex">
+                    <button class="btn search-btn-general" type="submit"><span class="iconify" data-icon="flat-color-icons:search" data-inline="false" data-flip="horizontal"></span></button>
+                    <input class="form-control me-2 searchInputFieldGeneral" type="search" placeholder="Search" aria-label="Search" id="searchInputField1">
+                  </form>
+                
+                  <li class="nav-item">
+                    <a class="nav-link active signin-out-link" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#sign-in-registration-modal">Sign-In / Sign-Up</a>
+                  </li>
+                  <li class="nav-item sell-product">
+                    <a class="nav-link active" aria-current="page" href="create-ad.html">Sell</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+<!-- Modal -->
+<div class="modal fade" id="sign-in-registration-modal" tabindex="-1" aria-labelledby="sign-in-registration-modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+        <div class="container mt-2 mb-4">
+          <div class="col-sm-12 ml-auto mr-auto">
+            <ul class="nav nav-pills nav-fill mb-1" id="pills-tab" role="tablist">
+              <li class="nav-item"> <a class="nav-link active" id="pills-signin-tab" data-toggle="pill" href="#pills-signin" role="tab" aria-controls="pills-signin" aria-selected="true">Sign In</a> </li>
+              <li class="nav-item"> <a class="nav-link" id="pills-signup-tab" data-toggle="pill" href="#pills-signup" role="tab" aria-controls="pills-signup" aria-selected="false">Sign Up</a> </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-signin" role="tabpanel" aria-labelledby="pills-signin-tab">
+                <div class="col-sm-12 border border-primary shadow rounded pt-2">
+                  <form method="post" id="signInForm">
+                    <div class="form-group">
+                      <label class="font-weight-bold">Email <span class="text-danger">*</span></label>
+                      <input type="email" name="signin-email" id="signin-email" class="form-control" placeholder="Enter valid email" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="font-weight-bold">Password <span class="text-danger">*</span></label>
+                      <input type="password" name="signin-password" id="signin-password" class="form-control" placeholder="***********" required>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col">
+                          <label><input type="checkbox" name="condition" id="condition"> Remember me.</label>
+                        </div>
+                        <div class="col text-right"> <a href="javascript:;" data-toggle="modal" data-target="#forgotPass">Forgot Password?</a> </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input type="submit" name="signin-btn" value="Sign In" class="btn btn-block btn-primary" id="signin-btn">
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pills-signup" role="tabpanel" aria-labelledby="pills-signup-tab">
+                <div class="col-sm-12 border border-primary shadow rounded pt-2">
+                  <form method="post" id="signUpForm">
+                    <div class="form-group">
+                      <label class="font-weight-bold">Email <span class="text-danger">*</span></label>
+                      <input type="email" name="signup-email" id="signup-email" class="form-control" placeholder="Enter valid email" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="font-weight-bold">First Name <span class="text-danger">*</span></label>
+                      <input type="text" name="firstname" id="firstname" class="form-control" placeholder="Enter your user name" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="font-weight-bold">Last Name <span class="text-danger">*</span></label>
+                      <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Enter your user name" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="font-weight-bold">Phone Number</label>
+                      <input type="text" name="phonenumber" id="phonenumber" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="font-weight-bold">Location</label>
+                      <input type="text" name="location" id="location" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="font-weight-bold">Password <span class="text-danger">*</span></label><br>
+                      <input class="form-control" type="password" placeholder="Password" id="signup-password" required>
+
+                    </div>
+                    <div class="form-group">
+                      <label class="font-weight-bold">Confirm Password <span class="text-danger">*</span></label><br>
+                      <input class="form-control" type="password" placeholder="Confirm Password" id="confirm_password" required>
+
+                    </div>
+                    <div class="form-group">
+                      <label><input type="checkbox" name="signupcondition" id="signupcondition" required> I agree with the <a href="javascript:;">Terms &amp; Conditions</a> for Registration.</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="submit" name="signupsubmit" value="Sign Up" class="btn btn-block btn-primary" id="signup-btn">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Modal -->
+          <div class="modal fade" id="forgotPass" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <form method="post" id="forgotpassForm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Forgot Password</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label>Email <span class="text-danger">*</span></label>
+                      <input type="email" name="forgotemail" id="forgotemail" class="form-control" placeholder="Enter your valid email..." required>
+                    </div>
+                    <div class="form-group">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Sign In</button>
+                    <button type="submit" name="forgotPass" class="btn btn-primary"><i class="fa fa-envelope"></i> Send Request</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div> 
+
+    </div>
+  </div>
+</div>
+        
+    
+        <section class="categories-section">
+            <h5 class="categories-header">CATEGORIES</h5>
+            <hr>
+            <ul class="categories-list flex-row">
+                <li class="all-category"><span>All</span><span class="iconify" data-icon="gg:menu-grid-o" data-inline="false" data-flip="horizontal"></span></li>
+                <li class="automobiles"><span>Automobiles</span> <span class="iconify" data-icon="openmoji:automobile" data-inline="false"></span></li>
+                <li class="sports"><span>Sports</span><span class="iconify" data-icon="fluent:sport-soccer-20-filled" data-inline="false"></span></li>
+                <li class="electronics"><span>Electronics</span><span class="iconify" data-icon="flat-color-icons:electronics" data-inline="false"></span></li>
+                <li class="fashion"><span>Fashion</span><span class="iconify" data-icon="emojione-v1:shopping-bags" data-inline="false"></span></li>
+                <li class="real-estate"><span>Real Estate</span><span class="iconify" data-icon="clarity:building-solid-badged" data-inline="false"></span></li>
+            </ul>
+        </section>
+
+        <section class="landing-page-content-section flex-col">
+            <div class="landing-page-content-header-div flex-row">
+                <h5 class="search-header">ALL ADS</h5>
+                <div class="dropdown result-filter flex-row">
+                  <span class="mr-2">Filter by:</span>
+                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Filter Results
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li class="sort-price-asc"><a class="dropdown-item" href="#">Price: Low to High</a></li>
+                    <li class="sort-price-desc"><a class="dropdown-item" href="#">Price: High to Low</a></li>
+                    <li class="sort-product-rating"><a class="dropdown-item" href="#">Product Rating</a></li>
+                  </ul>
+                </div>
+            </div>
+            <hr class="mt-2">
+         
+            <div class="row row-cols-1 row-cols-md-4 g-4 result-display-div">
+               
+          </div>
+           
+            <div class="landing-page-pagination-div flex-row">
+                <div class="previous-page-btn flex-row btn"><span class="iconify" data-icon="bi:arrow-bar-left" data-inline="false"></span> <span>Prev</span></div>
+                <div>1 of 100</div>
+                <div class="next-page-btn flex-row btn"><span>Next</span><span class="iconify" data-icon="bi:arrow-bar-right" data-inline="false"></span></div>
+            </div>
+
+        </section>
+
+        <footer class="flex-row">
+          <p class="team-details">&copy; <script>document.write(new Date().getFullYear())</script> KVT Team. All rights reserved</p>
+        </footer>
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+ 
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <script src="script/signin-signup.js"></script>
+    <script src="script/index.js"></script>
+  </body>
+</html>
