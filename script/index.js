@@ -17,7 +17,7 @@ const sortProductRating = document.querySelector(".sort-product-rating");
 let apiUrl = "https://kvt-api.herokuapp.com/";
 
 const createCard = (postData) => {
-  const productImage = apiUrl+postData.productImage[0];
+  const productImage = postData.productImage[0];
   let card = ` <div class="col product-card">
           <div class="card h-100 flex-col">
           <img src=`${productImage}` class="card-img-top" alt="product_image">
