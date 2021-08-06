@@ -14,7 +14,7 @@ const sortPriceAscending = document.querySelector(".sort-price-asc");
 const sortPriceDescending = document.querySelector(".sort-price-desc");
 const sortProductRating = document.querySelector(".sort-product-rating");
 
-let apiUrl = "https://kvt-api.herokuapp.com";
+let apiUrl = "https://kvt-api.herokuapp.com/";
 
 const createCard = (postData) => {
   const productImage = postData.productImage[0];
