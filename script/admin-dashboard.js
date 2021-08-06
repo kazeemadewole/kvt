@@ -6,6 +6,7 @@ let approvedPostsTabCount = document.querySelector(
 );
 
 let hostedUrl = "https://kvt-api.herokuapp.com";
+// let hostedUrl = "http://127.0.0.1:5005";
 
 signOutBtn.addEventListener("click", () => {
   localStorage.clear("adminToken");

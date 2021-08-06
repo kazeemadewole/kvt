@@ -5,12 +5,16 @@ let detailsPrice = document.querySelector(".details-price");
 let mainInfo = document.querySelector(".main-info");
 let phoneNumber = document.querySelector(".phone-number .value");
 let deletePostBtn = document.querySelector(".delete-post-btn");
+let modifyPostBtn = document.querySelector(".modify-post-btn");
 let signOut = document.querySelector(".signout-btn");
 
 let hostedUrl = "https://kvt-api.herokuapp.com";
 
 const productId = localStorage.getItem("productId");
 
+modifyPostBtn.addEventListener("click", () => {
+  window.location.href = "modify-post.html";
+});
 const populateProductPage = (data) => {
   const date = new Date();
   datePosted.innerText = date.toDateString(data.createdAt);

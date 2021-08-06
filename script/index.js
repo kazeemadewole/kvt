@@ -20,7 +20,9 @@ const createCard = (postData) => {
   const productImage = postData.productImage[0];
   let card = ` <div class="col product-card">
           <div class="card h-100 flex-col">
+          <div class="card-image-div">
           <img src="${productImage}" class="card-img-top" alt="product_image">
+          </div>
           <div class="card-body">
             <h6 class="card-title">${postData.title}</h6>
             <p class="product-description">${postData.description
@@ -29,7 +31,7 @@ const createCard = (postData) => {
               .join(" ")}</p>
             <h5 class="price">${postData.price}</h5>
             <p class="region">${postData.location}</p>
-            <p>${postData.category.category}</p>
+            <p class="category">${postData.category.category}</p>
           </div>
         </div>
     </div> `;
@@ -203,6 +205,7 @@ fetch(url)
     if (!data) {
       console.log("server unavailable");
     } else {
+      console.log(data);
       createAllAds(data.data);
       filterResult(data.data);
     }

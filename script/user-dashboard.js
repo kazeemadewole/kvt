@@ -18,12 +18,12 @@ const populateProfilePage = (data) => {
   profileWrapper.innerText = "";
   const profile = ` 
   <div class="col col-md-12 biodata-details">
-      <p class="details-para"><span class="bioData-label">Name: </span><span class="bioData-value">${data.firstName} ${data.lastName}</span></p>
-      <p class="details-para"><span class="bioData-label">Email: </span><span class="bioData-value">${data.email}</span></p>
-      <p class="details-para"><span class="bioData-label">Address: </span><span class="bioData-value">${data.location}</span></p>
-      <p class="details-para"><span class="bioData-label">Mobile Number: </span><span class="bioData-value">${data.phone}</span></p>
+      <p class="details-para"><span class="bioData-label">Name: </span><br><span class="bioData-value">${data.firstName} ${data.lastName}</span></p>
+      <p class="details-para"><span class="bioData-label">Email: </span><br><span class="bioData-value">${data.email}</span></p>
+      <p class="details-para"><span class="bioData-label">Address: </span><br><span class="bioData-value">${data.location}</span></p>
+      <p class="details-para"><span class="bioData-label">Mobile Number: </span><br><span class="bioData-value">${data.phone}</span></p>
       
-      <div class="flex-row social-media-div">
+      <div class="flex-col social-media-div">
           <p>Connect with me</p>
           <div class="social-share-wrapper flex-row">
               <a href="#"><span class="iconify" data-icon="ic:baseline-alternate-email" data-inline="false"></span></a>

@@ -9,7 +9,6 @@ const productDescription = document.querySelector("#product-description");
 const pictureUpload = document.querySelector("#picture-select");
 const formDiv = document.querySelector("#new-post-form");
 const signout = document.querySelector(".signout-btn");
-const createAdBtnDiv = document.querySelector(".createAd-btn-div");
 const pendingPostsTabCount = document.querySelector(".pending-posts-tab-count");
 const rejectedPostsTabCount = document.querySelector(
   ".rejected-posts-tab-count"
@@ -21,9 +20,7 @@ const favoritePostsTabCount = document.querySelector(
   ".favorite-posts-tab-count"
 );
 
-let spinner = document.createElement("p");
-spinner.innerText = "... uploading post, please wait ...";
-
+const productId = localStorage.getItem("productId");
 const token = localStorage.getItem("token");
 let hostedUrl = "https://kvt-api.herokuapp.com";
 
@@ -52,8 +49,15 @@ if (!token) {
   });
 })();
 
+const populateForm = (data) => {
+  productTitle.value = data.title;
+  price.value = `${data.price}`;
+  productDescription.textContent = data.description;
+  city.value = data.location;
+  category.value = data.category.category;
+};
+
 formDiv.addEventListener("submit", (e) => {
-  createAdBtnDiv.appendChild(spinner);
   e.preventDefault();
   let categoryValue = "";
   if (category.value === "automobiles") {
@@ -68,40 +72,41 @@ formDiv.addEventListener("submit", (e) => {
     categoryValue += "60a389756dc4ab4e8efdc166";
   }
 
-  const files = pictureUpload.files;
-  const formData = new FormData();
-  for (let x = 0; x < files.length; x++) {
-    let file = files[x];
-    console.log(file);
-    formData.append("productImage", file);
-  }
-  formData.append("title", productTitle.value);
-  formData.append("description", productDescription.value);
-  formData.append("location", city.value);
-  formData.append("category", categoryValue);
-  formData.append("price", price.value);
-  formData.append("contact", localStorage.getItem("phoneNumber"));
+  //   const files = pictureUpload.files;
+  //   const formData = new FormData();
+  //   for (let x = 0; x < files.length; x++) {
+  //     let file = files[x];
+  //     console.log(file);
+  //     formData.append("productImage", file);
+  //   }
+  //   formData.append("title", productTitle.value);
+  //   formData.append("description", productDescription.value);
+  //   formData.append("location", city.value);
+  //   formData.append("category", categoryValue);
+  //   formData.append("price", price.value);
+  //   formData.append("contact", localStorage.getItem("phoneNumber"));
 
-  console.log(formData);
-  const postUrl = `${hostedUrl}/user/me/product`;
+  //   console.log(formData);
+  const postUrl = `${hostedUrl}/user/me/product/${productId}`;
   fetch(postUrl, {
-    method: "POST",
+    method: "PUT",
     headers: {
       Authorization: `Bearer ${token}`,
     },
-    body: formData,
+    // body: formData,
+    body: {
+      title: productTitle.value,
+      description: productDescription.value,
+      location: city.value,
+      category: categoryValue,
+      price: price.value,
+      status: "pending",
+    },
   })
     .then((resp) => resp.json())
     .then((data) => {
       console.log("hello", data);
-
-      if (data.status === "success") {
-        alert("Ad successfully created");
-        window.location.reload();
-      } else if (data.status === "error") {
-        spinner.style.display = "none";
-        alert("Ad creation unsuccessful, Please try again");
-      }
+      // window.location.reload();
     })
     .catch((error) => console.log(error));
 });
@@ -144,4 +149,12 @@ fetch(tabCountUrl, {
       approvedPostsTabCount.innerText = data.Approved.length;
       rejectedPostsTabCount.innerText = data.Rejected.length;
     }
+  });
+
+const productUrl = `${hostedUrl}/${productId}`;
+fetch(productUrl)
+  .then((resp) => resp.json())
+  .then((data) => {
+    console.log(data.data);
+    populateForm(data.data);
   });

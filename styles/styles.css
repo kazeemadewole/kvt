@@ -1,5 +1,4 @@
 body{
-    /* background-color: white; */
     padding: 0%;
     margin: 0%;
 }
@@ -51,7 +50,7 @@ a:hover{
 .navbar{
     background-color: #22223B;
     color: white;
-    padding: 1rem 6rem;
+    padding: 0.25rem 1rem;
 }
 .navbar .container-fluid{
     justify-content: space-between;
@@ -99,28 +98,43 @@ a:hover{
 
 /* Categories Section */
 .categories-section{
-    margin: 1rem 6rem;
+    margin: 1rem 0.5rem;
     border: 1px solid black;
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 10px;
     border: none;
     box-shadow: 0 0 0.75rem rgba(85, 80, 80, 0.25);
 }
+.categories-header{
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin: 0rem;
+    padding: 0rem;
+}
+.categories-section hr{
+    margin: 0.25rem 0rem 0.25rem 0rem;
+}
 .categories-section .categories-list{
     padding: 0rem;
-    justify-content: space-between;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 0rem;
 }
 .categories-list li{
     border: none;
     box-shadow: 0 0 0.25rem rgba(85, 80, 80, 0.25);
     border-radius: 5px;
-    padding: 0.5rem 1rem;
-    margin: 0rem 0.5rem;
+    padding: 0.25rem 0.375rem;
+    margin: 0.25rem 0.375rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.categories-list li span{
+    font-size: 0.9rem;
+}
+.registered-user li span{
+    font-size: 0.8rem;
 }
 .categories-list li:hover{
     cursor: pointer;
@@ -132,36 +146,44 @@ a:hover{
     color: white;
 }
 .categories-list .iconify{
-    margin-left: 1rem;
-    font-size: 1.5rem;
+    margin-left: 0.375rem;
+    font-size: 1rem;
 }
 
 /* Result Display Section */
 .landing-page-content-section{
-    margin: 1rem 6rem;
+    margin: 1rem 0.5rem;
     border-radius: 10px;
     padding: 1rem;
     border: none;
     box-shadow: 0 0 0.75rem rgba(85, 80, 80, 0.25);
+    align-items: center;
 }
 .landing-page-content-section .landing-page-content-header-div{
     justify-content: space-between;
     margin: 0%;
     padding: 0%;
-    align-items: center;
+    align-items: flex-end;
+    width: 100%;
 }
 .landing-page-content-header-div .search-header{
     margin: 0%;
     padding: 0%;
+    font-size: 1.125rem;
+    font-weight: bold
 }
 .landing-page-content-header-div .result-filter{
-    
+    align-items: flex-end;
+}
+.landing-page-content-header-div .result-filter span{
+    font-size: 0.875rem;
+    font-weight: bold;
 }
 .landing-page-content-header-div .result-filter .btn{
     background-color: #22223B;
     color: white;
-    /* width: 12.5rem; */
-    /* padding: 0rem; */
+    padding: 0.0625rem 0.5rem;
+    font-size: 0.75rem;
 }
 .result-display-div .col{
     margin-bottom: 2rem;
@@ -169,6 +191,7 @@ a:hover{
 }
 .result-display-div .col .card{
     border: none;
+    border-radius: 0.5rem;
     box-shadow: 0 0 0.25rem rgba(85, 80, 80, 0.25);
 }
 .result-display-div .col .card:hover{
@@ -176,30 +199,53 @@ a:hover{
     cursor: pointer;
     transition: transform 1s, 0.875s ease-in-out;
 }
+.result-display-div .col .card-image-div{
+    display: flex;
+    width: 100%;
+    height: 10rem;
+    justify-content: center;
+}
 .result-display-div .col .card-img-top{
     width: 100%;
-    align-self: center;
     padding: 0%;
     margin: 0%;
-    height: 240px;
     object-fit: cover;
-    object-position: 100% 0;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
 }
 .result-display-div .col .card-body{
-    padding-bottom: 0rem;
+    padding: 0.75rem;
 }
 .result-display-div .col .card-title{
     color: #22223B;
+    font-size: 1.0625rem;
+    font-weight: bold;
+    margin: 0rem;
 }
 .result-display-div .col .product-description{
     font-size: 0.825rem;
+    margin: 0.25rem 0rem;
 }
-.result-display-div .landing-page-pagination-div{
-    align-self: flex-end;
+.result-display-div .col .price{
+    font-size: 1rem;
+    font-weight: bold
 }
+.result-display-div .col .region{
+    font-size: 0.9rem;
+}
+.result-display-div .col .category{
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Pagination Div */
 .landing-page-content-section .landing-page-pagination-div{
-    align-self: flex-end;
     align-items: center;
+}
+.landing-page-content-section .landing-page-pagination-div div{
+    margin: 0rem 0.5rem;
+}
+.landing-page-content-section .landing-page-pagination-div .btn{
+    margin: 0rem;
 }
 .landing-page-content-section .landing-page-pagination-div .previous-page-btn{
     box-shadow: 0 0 0.5rem rgba(85, 80, 80, 0.25);
@@ -222,38 +268,45 @@ a:hover{
 .landing-page-content-section .landing-page-pagination-div .iconify{
     margin: 0rem 0.5rem;
 }
-.landing-page-content-section .landing-page-pagination-div div{
-    margin-left: 1rem;
-}
+
 
 
 /* Product Details Section */
 .product-details-section{
-    margin: 1rem 6rem;
+    margin: 1rem 0.5rem;
     border-radius: 10px;
     padding: 1rem;
     border: none;
     box-shadow: 0 0 0.75rem rgba(85, 80, 80, 0.25);
 }
 .product-details-section .product-details-header-div{
+    flex-direction: column !important;
     justify-content: space-between;
+    width: 100%;
     margin: 0%;
     padding: 0%;
     align-items: center;
 }
 .product-details-section .search-header{
-    margin: 0%;
+    margin: 0rem 0rem 0.25rem 0rem;
     padding: 0%;
+    font-size: 1.25rem;
 }
 .product-details-section .meta-details{
+    display: flex;
+    justify-content: space-between;
     margin: 0%;
     padding: 0%;
+    width: 100%;
+}
+.product-details-section .meta-details span{
+    font-size: 1rem;
 }
 .product-details-section .meta-details small{
     display: inline-block;
     font-size: 0.875rem;
     font-weight: bold;
-    margin-right: 1rem;
+    margin: 0rem;
 }
 
 .product-detail-div .images-div{
@@ -267,9 +320,11 @@ a:hover{
 
 }
 .product-detail-div .details .details-header{
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 0rem;
+    line-height: 1;
+    font-size: 1.25rem;
 }
 .product-detail-div .details  .details-title{
     margin: 0%;
@@ -278,15 +333,24 @@ a:hover{
 .product-detail-div .details .details-price{
     margin: 0%;
     padding: 0%;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
+    line-height: 1;
+}
+.product-detail-div .details .favorite-btn{
+    font-size: 1.25rem;
+}
+.product-detail-div .details hr{
+    margin: 0.25rem 0rem;
 }
 .product-detail-div .details .main-info{
     margin: 0%;
     padding: 0%;
+    font-size: 0.875rem;
 }
 .product-detail-div .details .phone-number{
-    margin: 0rem 0rem 1rem 0rem;
+    margin: 1rem 0rem 1rem 0rem;
     padding: 0%;
+    font-size: 0.9rem;
 }
 .product-detail-div .details .phone-number .value{
     font-weight: bold;
@@ -303,6 +367,7 @@ a:hover{
 .product-detail-div .details .social-media-sharing-div p{
     margin: 0%;
     padding: 0%;
+    font-size: 1rem;
 }
 .product-detail-div .details .social-media-sharing-div .social-share-wrapper{
     align-items: center;
@@ -310,7 +375,7 @@ a:hover{
 .product-detail-div .details .social-media-sharing-div .social-share-wrapper .iconify{
     color: #22223B;
     margin: 0rem 0.5rem 0rem 0rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .product-detail-div .details .ratings-div{
     margin: 0rem 2rem 0rem 0rem;
@@ -335,6 +400,7 @@ a:hover{
 .product-detail-div .details .chat-div{
     justify-content: center;
     margin-top: 3rem;
+    display: none;
 }
 .product-detail-div .details .chat-div .chat-launcher{
     background-color: #22223B;
@@ -356,6 +422,7 @@ a:hover{
     border-radius: 5px;
     align-items: center;
     color: red;
+    font-size: 0.75rem;
 }
 .product-details-section .pagination-div .btn:hover{
     background-color: #22223B;
@@ -391,6 +458,7 @@ a:hover{
     border-radius: 5px;
     align-items: center;
     color: #22223B;
+    font-size: 0.875rem;
 }
  .pagination-div .btn:hover{
     background-color: #22223B;
@@ -406,7 +474,7 @@ a:hover{
 
 /* Dashboard Body Content Formatting */
 .content-section{
-    margin: 1rem 6rem;
+    margin: 1rem 0.5rem;
     border-radius: 10px;
     padding: 1rem;
     border: none;
@@ -419,8 +487,12 @@ a:hover{
     align-items: center;
 }
 .content-section .header-div .search-header{
-    margin: 0%;
-    padding: 0%;
+    margin: 0rem;
+    padding: 0rem;
+    font-size: 1.25rem;
+}
+.content-section hr{
+    margin: 0rem 0rem 0.25rem 0rem;
 }
 
 
@@ -432,7 +504,7 @@ a:hover{
     margin: 0.5rem 0rem;
 }
 .profile-wrapper .biodata-details .bioData-label {
-    margin-right: 2rem;
+    font-size: 1rem;
 }
 .profile-wrapper .biodata-details .bioData-value {
     font-weight: bold;
@@ -442,8 +514,8 @@ a:hover{
     margin-right: 1rem;
 }
 .social-media-div .social-share-wrapper .iconify {
-    font-size: 2rem;
-    margin: 0rem 0.25rem;
+    font-size: 1.25rem;
+    margin: 0rem 0.25rem 0rem 0rem;
 }
 .social-media-div .social-share-wrapper .iconify:hover {
     color: blue;
@@ -467,15 +539,73 @@ a:hover{
 /* Footer Section */
 footer{
     background-color: #22223B;
-    padding: 0rem 6rem;
+    padding: 1rem 0.5rem;
     color: white;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
     margin-top: 4rem;
     justify-content: center;
 }
 footer .team-details{
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin: 0%;
     padding: 0%;
+    font-weight: bold;
 }
+
+@media (min-width: 992px){
+    hr{
+        margin: 0.5rem 0rem !important;
+    }
+
+    /* Page Navbar Section */
+.navbar{
+    padding: 0.75rem 1rem;
+}
+
+/* Categories Section */
+.categories-section{
+    margin: 1rem 6rem;
+}
+.categories-list li{
+    padding: 0.375rem 0.75rem;
+    margin: 0.25rem 0.75rem;
+}
+.categories-list li span{
+    font-size: 1.0625rem;
+}
+.registered-user li span{
+    font-size: 1rem;
+}
+.registered-user li{
+    margin: 0.25rem 0.5rem;
+    padding: 0.25rem 0.5rem;
+}
+.categories-list .iconify{
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* Result Display Section */
+.landing-page-content-section{
+    margin: 1rem 6rem;
+}
+.landing-page-content-header-div .result-filter span{
+    font-size: 1rem;
+}
+.landing-page-content-header-div .result-filter .btn{
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Product Details Section */
+.product-details-section{
+    margin: 1rem 6rem;
+}
+
+/* Dashboard Body Content Formatting */
+.content-section{
+    margin: 1rem 6rem;
+}
+
+}
+
+

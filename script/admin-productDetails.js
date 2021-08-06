@@ -82,6 +82,7 @@ deleteBtn.addEventListener("click", () => {
       .then((response) => response.json())
       .then((result) => {
         console.log(result);
+
         window.location.href = "admin-dashboard.html";
       })
       .catch((error) => console.log("error", error));

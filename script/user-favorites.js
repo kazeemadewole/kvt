@@ -19,7 +19,9 @@ const createCard = (postData) => {
   );
   let card = ` <div class="col product-card">
             <div class="card h-100 flex-col">
-            <img src="${productImage}" class="card-img-top" alt="product_image">
+            <div class="card-image-div">
+          <img src="${productImage}" class="card-img-top" alt="product_image">
+          </div>
             <div class="card-body">
               <h6 class="card-title">${postData.title}</h6>
               <p class="product-description">${postData.description
